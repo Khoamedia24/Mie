@@ -59,7 +59,8 @@ function renderProducts(products) {
     productsGrid.innerHTML = products.map(product => `
         <div class="product-card" data-id="${product.id}">
             <div class="product-image">
-                <div class="placeholder-image">
+                <img src="${product.images[0]}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="placeholder-image" style="display: none;">
                     <i class="fas fa-gem"></i>
                 </div>
                 ${product.originalPrice > product.price ? '<div class="sale-badge">SALE</div>' : ''}

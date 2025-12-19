@@ -22,9 +22,9 @@ const JEWELRY_DATABASE = {
             description: "A stunning solitaire diamond ring featuring a 1.5-carat round brilliant diamond set in 18k white gold. The perfect symbol of eternal love.",
             detailedDescription: "This magnificent engagement ring showcases exceptional craftsmanship with a premium 1.5-carat round brilliant cut diamond. The stone exhibits excellent clarity (VS1) and color grade (F), ensuring maximum brilliance and fire. Set in luxurious 18k white gold with delicate cathedral setting that elevates the diamond for optimal light performance.",
             images: [
-                "images/ring-1-main.jpg",
-                "images/ring-1-side.jpg", 
-                "images/ring-1-detail.jpg"
+                "sanpham1.jpeg",
+                "sanpham1.jpeg", 
+                "sanpham1.jpeg"
             ],
             specifications: {
                 "Metal": "18k White Gold",
@@ -49,9 +49,9 @@ const JEWELRY_DATABASE = {
             description: "An exquisite necklace featuring a 3-carat Ceylon sapphire surrounded by brilliant diamonds in 18k yellow gold.",
             detailedDescription: "This breathtaking necklace features a rare 3-carat natural Ceylon sapphire of exceptional quality, surrounded by a halo of brilliant-cut diamonds. The rich blue sapphire displays remarkable clarity and vibrant color saturation. Crafted in warm 18k yellow gold with an adjustable chain length.",
             images: [
-                "images/necklace-1-main.jpg",
-                "images/necklace-1-detail.jpg",
-                "images/necklace-1-worn.jpg"
+                "sanpham2.jpeg",
+                "sanpham2.jpeg",
+                "sanpham2.jpeg"
             ],
             specifications: {
                 "Metal": "18k Yellow Gold",
@@ -76,9 +76,9 @@ const JEWELRY_DATABASE = {
             description: "Elegant Tahitian pearl earrings with diamond accents, perfect for special occasions or everyday luxury.",
             detailedDescription: "These sophisticated drop earrings feature lustrous Tahitian pearls with beautiful peacock overtones. Each pearl is carefully matched for size, shape, and luster. Adorned with brilliant-cut diamond accents and crafted in lustrous 18k white gold for a timeless appeal.",
             images: [
-                "images/earrings-1-main.jpg",
-                "images/earrings-1-detail.jpg",
-                "images/earrings-1-worn.jpg"
+                "sanpham3.jpeg",
+                "sanpham3.jpeg",
+                "sanpham3.jpeg"
             ],
             specifications: {
                 "Metal": "18k White Gold",
@@ -103,9 +103,9 @@ const JEWELRY_DATABASE = {
             description: "Classic tennis bracelet featuring 5 carats of brilliant diamonds in premium 18k white gold setting.",
             detailedDescription: "This timeless tennis bracelet showcases 42 perfectly matched round brilliant diamonds totaling 5 carats. Each diamond is individually prong-set in 18k white gold, creating maximum brilliance and security. The seamless design features a hidden safety clasp for added security.",
             images: [
-                "images/bracelet-1-main.jpg",
-                "images/bracelet-1-worn.jpg",
-                "images/bracelet-1-detail.jpg"
+                "sanpham4.jpeg",
+                "sanpham4.jpeg",
+                "sanpham4.jpeg"
             ],
             specifications: {
                 "Metal": "18k White Gold",
@@ -130,9 +130,9 @@ const JEWELRY_DATABASE = {
             description: "Luxury Swiss timepiece with rose gold case, diamond hour markers, and premium leather strap.",
             detailedDescription: "This exceptional timepiece combines Swiss precision with luxurious aesthetics. The 38mm rose gold case houses a premium automatic movement with 72-hour power reserve. The mother-of-pearl dial features diamond hour markers and elegant rose gold hands.",
             images: [
-                "images/watch-1-main.jpg",
-                "images/watch-1-face.jpg",
-                "images/watch-1-side.jpg"
+                "sanpham5.jpeg",
+                "sanpham5.jpeg",
+                "sanpham5.jpeg"
             ],
             specifications: {
                 "Case Material": "18k Rose Gold",
@@ -158,9 +158,9 @@ const JEWELRY_DATABASE = {
             description: "Statement emerald ring with Colombian emerald and diamond halo in vintage-inspired setting.",
             detailedDescription: "This show-stopping cocktail ring features a magnificent 2.5-carat Colombian emerald as the centerpiece. The vibrant green stone is surrounded by a double halo of brilliant diamonds and set in a vintage-inspired 18k yellow gold mounting.",
             images: [
-                "images/ring-2-main.jpg",
-                "images/ring-2-top.jpg",
-                "images/ring-2-side.jpg"
+                "sanpham6.jpeg",
+                "sanpham6.jpeg",
+                "sanpham6.jpeg"
             ],
             specifications: {
                 "Metal": "18k Yellow Gold",
