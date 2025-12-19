@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - TITANIS JEWELRY</title>
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/product-enhancement.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="luxury-nav">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a class="luxury-brand" href="index.html">
+                        <div class="brand-logo">
+                            <span class="brand-text">TITANIS</span>
+                            <span class="brand-subtitle">JEWELRY</span>
+                            <div class="brand-accent"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="products.html" class="nav-link">COLLECTIONS</a></li>
+                        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                        <li><a href="search.html" class="nav-icon"><i class="fas fa-search"></i></a></li>
+                        <li><a href="cart.html" class="nav-icon active"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a></li>
+                    </ul>
+                </div>
+                <button class="mobile-toggle" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <!-- Cart Hero -->
+        <section class="cart-hero">
+            <div class="cart-hero-content">
+                <h1 class="cart-title">YOUR SHOPPING BAG</h1>
+                <p class="cart-subtitle">Review your selected jewelry pieces</p>
+            </div>
+        </section>
+
+        <!-- Cart Content -->
+        <section class="cart-content">
+            <div class="cart-container">
+                <div class="cart-main">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="cart-sidebar">
+                    <div class="cart-summary">
+                        <h3>ORDER SUMMARY</h3>
+                        
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <span id="cart-subtotal">$0.00</span>
+                        </div>
+                        
+                        <div class="summary-line">
+                            <span>Shipping:</span>
+                            <span>Complimentary</span>
+                        </div>
+                        
+                        <div class="summary-line">
+                            <span>Tax:</span>
+                            <span id="cart-tax">Calculated at checkout</span>
+                        </div>
+                        
+                        <div class="summary-line total">
+                            <span>Total:</span>
+                            <span id="cart-total">$0.00</span>
+                        </div>
+                        
+                        <button class="checkout-button" onclick="proceedToCheckout()">
+                            <i class="fas fa-lock"></i>
+                            SECURE CHECKOUT
+                        </button>
+                        
+                        <div class="security-badges">
+                            <div class="badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure Payment</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-truck"></i>
+                                <span>Free Shipping</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-undo"></i>
+                                <span>30-Day Returns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Info -->
+        <section class="cart-services">
+            <div class="services-container">
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>COMPLIMENTARY SERVICES</h3>
+                    <p>Free gift wrapping, sizing, and personalized consultation with every purchase</p>
+                </div>
+                
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>AUTHENTICITY GUARANTEE</h3>
+                    <p>Every piece comes with a certificate of authenticity and detailed appraisal</p>
+                </div>
+                
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>LIFETIME SUPPORT</h3>
+                    <p>Complimentary cleaning, maintenance, and repair services for life</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recently Viewed -->
+        <section class="recently-viewed" style="display: none;" id="recentlyViewedSection">
+            <div class="section-header">
+                <h2 class="section-title">RECENTLY VIEWED</h2>
+                <p class="section-subtitle">Items you've recently browsed</p>
+            </div>
+            <div class="recently-viewed-grid" id="recentlyViewedGrid">
+                <!-- Recently viewed items will be loaded here -->
+            </div>
+        
+        <!-- Recently Viewed Section -->
+        <section class="recently-viewed-section" id="recentlyViewedSection" style="display: none;">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">RECENTLY VIEWED</h2>
+                    <p class="section-subtitle">Items you've looked at recently</p>
+                </div>
+                <div class="recently-viewed-grid" id="recentlyViewedGrid">
+                    <!-- Recently viewed items will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CUSTOMER CARE</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Care Instructions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href="#">Custom Design</a></li>
+                    <li><a href="#">Repair Service</a></li>
+                    <li><a href="#">Appraisals</a></li>
+                    <li><a href="#">Personal Shopping</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="about.html">About Titanis</a></li>
+                    <li><a href="#">Heritage</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONNECT</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <p>Subscribe to our newsletter</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TITANIS JEWELRY. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/database.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

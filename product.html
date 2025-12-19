@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - TITANIS JEWELRY</title>
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/product-enhancement.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="product-page">
+    <header>
+        <nav class="luxury-nav">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a class="luxury-brand" href="index.html">
+                        <div class="brand-logo">
+                            <span class="brand-text">TITANIS</span>
+                            <span class="brand-subtitle">JEWELRY</span>
+                            <div class="brand-accent"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="products.html" class="nav-link">COLLECTIONS</a></li>
+                        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                        <li><a href="search.html" class="nav-icon"><i class="fas fa-search"></i></a></li>
+                        <li><a href="cart.html" class="nav-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a></li>
+                    </ul>
+                </div>
+                <button class="mobile-toggle" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <div class="breadcrumb-container">
+                <a href="index.html">Home</a>
+                <span class="separator">></span>
+                <a href="products.html">Collections</a>
+                <span class="separator">></span>
+                <span id="productBreadcrumb">Product</span>
+            </div>
+        </section>
+
+        <!-- Product Detail -->
+        <section class="product-detail">
+            <div class="product-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image" id="mainProductImage">
+                        <!-- Main product image will be loaded here -->
+                    </div>
+                    <div class="image-thumbnails" id="productThumbnails">
+                        <!-- Thumbnail images will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-header">
+                        <h1 id="productName">Product Name</h1>
+                        <div class="product-rating" id="productRating">
+                            <!-- Rating will be loaded here -->
+                        </div>
+                        <div class="product-price" id="productPrice">$0</div>
+                    </div>
+
+                    <div class="product-description">
+                        <p id="productDescription">Product description will be loaded here</p>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="quantity-selector">
+                            <label>Quantity:</label>
+                            <div class="quantity-input">
+                                <button type="button" onclick="decreaseQuantity()">-</button>
+                                <input type="number" id="quantityInput" value="1" min="1">
+                                <button type="button" onclick="increaseQuantity()">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" id="addToCartBtn">
+                            <i class="fas fa-shopping-bag"></i>
+                            ADD TO CART
+                        </button>
+                        <button class="wishlist-btn" onclick="toggleWishlist()">
+                            <i class="far fa-heart"></i>
+                            ADD TO WISHLIST
+                        </button>
+                    </div>
+
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Free Worldwide Shipping</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo"></i>
+                            <span>30-Day Returns</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <span>Lifetime Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Specifications -->
+        <section class="product-specifications">
+            <div class="specs-container">
+                <h2>PRODUCT SPECIFICATIONS</h2>
+                <div class="specs-grid" id="productSpecs">
+                    <!-- Specifications will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">YOU MAY ALSO LIKE</h2>
+                    <p class="section-subtitle">Discover similar exceptional pieces</p>
+                </div>
+                <div class="related-grid" id="relatedProductsGrid">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Reviews -->
+        <section class="product-reviews">
+            <div class="reviews-container">
+                <div id="productReviews">
+                    <!-- Reviews content will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CUSTOMER CARE</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Care Instructions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href="#">Custom Design</a></li>
+                    <li><a href="#">Repair Service</a></li>
+                    <li><a href="#">Appraisals</a></li>
+                    <li><a href="#">Personal Shopping</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="about.html">About Titanis</a></li>
+                    <li><a href="#">Heritage</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONNECT</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <p>Subscribe to our newsletter</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TITANIS JEWELRY. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/database.js"></script>
+    <script src="js/product-detail.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>

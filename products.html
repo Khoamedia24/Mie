@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Jewelry Collections - TITANIS JEWELRY</title>
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="luxury-nav">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a class="luxury-brand" href="index.html">
+                        <div class="brand-logo">
+                            <span class="brand-text">TITANIS</span>
+                            <span class="brand-subtitle">JEWELRY</span>
+                            <div class="brand-accent"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="products.html" class="nav-link">COLLECTIONS</a></li>
+                        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                        <li><a href="search.html" class="nav-icon"><i class="fas fa-search"></i></a></li>
+                        <li><a href="cart.html" class="nav-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a></li>
+                    </ul>
+                </div>
+                <button class="mobile-toggle" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <!-- Products Hero -->
+        <section class="products-hero">
+            <div class="products-hero-content">
+                <h1 class="products-title">LUXURY COLLECTIONS</h1>
+                <p class="products-subtitle">Discover exceptional jewelry crafted with passion and precision</p>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="products-filters">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="categoryFilter" onchange="applyFilters()">
+                        <option value="all">All Categories</option>
+                        <option value="rings">Rings</option>
+                        <option value="necklaces">Necklaces</option>
+                        <option value="earrings">Earrings</option>
+                        <option value="bracelets">Bracelets</option>
+                        <option value="watches">Watches</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Price Range:</label>
+                    <select id="priceFilter" onchange="applyFilters()">
+                        <option value="all">All Prices</option>
+                        <option value="0-2000">Under $2,000</option>
+                        <option value="2000-5000">$2,000 - $5,000</option>
+                        <option value="5000-10000">$5,000 - $10,000</option>
+                        <option value="10000-999999">Above $10,000</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Sort By:</label>
+                    <select id="sortFilter" onchange="applyFilters()">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name A-Z</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+                
+                <button class="filter-reset" onclick="resetFilters()">Reset All</button>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-grid-section">
+            <div class="products-container">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+                
+                <div class="no-products" id="noProducts" style="display: none;">
+                    <h3>No products found</h3>
+                    <p>Try adjusting your filters or search criteria</p>
+                    <button onclick="resetFilters()" class="cta-button">View All Products</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Showcase -->
+        <section class="categories-showcase">
+            <div class="section-header">
+                <h2 class="section-title">SHOP BY CATEGORY</h2>
+                <p class="section-subtitle">Explore our curated collections</p>
+            </div>
+            
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CUSTOMER CARE</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Care Instructions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href="#">Custom Design</a></li>
+                    <li><a href="#">Repair Service</a></li>
+                    <li><a href="#">Appraisals</a></li>
+                    <li><a href="#">Personal Shopping</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="about.html">About Titanis</a></li>
+                    <li><a href="#">Heritage</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONNECT</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <p>Subscribe to our newsletter</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TITANIS JEWELRY. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/database.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>

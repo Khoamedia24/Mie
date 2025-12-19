@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Jewelry - TITANIS JEWELRY</title>
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="luxury-nav">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a class="luxury-brand" href="index.html">
+                        <div class="brand-logo">
+                            <span class="brand-text">TITANIS</span>
+                            <span class="brand-subtitle">JEWELRY</span>
+                            <div class="brand-accent"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="products.html" class="nav-link">COLLECTIONS</a></li>
+                        <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                        <li><a href="search.html" class="nav-icon"><i class="fas fa-search"></i></a></li>
+                        <li><a href="cart.html" class="nav-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a></li>
+                    </ul>
+                </div>
+                <button class="mobile-toggle" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <!-- Search Hero -->
+        <section class="search-hero">
+            <div class="search-hero-content">
+                <h1 class="search-title">FIND YOUR PERFECT PIECE</h1>
+                <p class="search-subtitle">Search our exquisite collection of luxury jewelry</p>
+                
+                <div class="search-bar-main">
+                    <input type="text" id="searchInput" placeholder="Search for jewelry, diamonds, gold..." value="">
+                    <button onclick="performSearch()" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Filters -->
+        <section class="search-filters">
+            <div class="filters-container">
+                <h3>Refine Your Search</h3>
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label>Category:</label>
+                        <select id="searchCategoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="rings">Rings</option>
+                            <option value="necklaces">Necklaces</option>
+                            <option value="earrings">Earrings</option>
+                            <option value="bracelets">Bracelets</option>
+                            <option value="watches">Watches</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Price Range:</label>
+                        <select id="searchPriceFilter">
+                            <option value="all">All Prices</option>
+                            <option value="0-2000">Under $2,000</option>
+                            <option value="2000-5000">$2,000 - $5,000</option>
+                            <option value="5000-10000">$5,000 - $10,000</option>
+                            <option value="10000-999999">Above $10,000</option>
+                        </select>
+                    </div>
+                    
+                    <button onclick="applySearchFilters()" class="filter-apply">Apply Filters</button>
+                    <button onclick="resetSearchFilters()" class="filter-reset">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Results -->
+        <section class="search-results">
+            <div class="results-container">
+                <div class="results-header" id="searchResultsHeader">
+                    <h3>Search Results (5 products found)</h3>
+                </div>
+                
+                <div class="search-grid" id="searchResultsGrid">
+                    <!-- Sample Products -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-ring"></i>
+                            </div>
+                            <span class="product-badge">NEW</span>
+                            <button class="product-favorite"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Diamond Solitaire Ring</h3>
+                            <p class="product-category">RINGS</p>
+                            <p class="product-price">$4,890</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">(24 reviews)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <span class="product-badge">BESTSELLER</span>
+                            <button class="product-favorite"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pearl Necklace Elegance</h3>
+                            <p class="product-category">NECKLACES</p>
+                            <p class="product-price">$2,150</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">(18 reviews)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <span class="product-badge">EXCLUSIVE</span>
+                            <button class="product-favorite"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Sapphire Drop Earrings</h3>
+                            <p class="product-category">EARRINGS</p>
+                            <p class="product-price">$3,750</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">(31 reviews)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <span class="product-badge">LIMITED</span>
+                            <button class="product-favorite"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Gold Tennis Bracelet</h3>
+                            <p class="product-category">BRACELETS</p>
+                            <p class="product-price">$6,200</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-text">(12 reviews)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span class="product-badge">PRESTIGE</span>
+                            <button class="product-favorite"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Swiss Luxury Watch</h3>
+                            <p class="product-category">WATCHES</p>
+                            <p class="product-price">$12,500</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">(8 reviews)</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-quick-view"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="no-results" id="noSearchResults" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No Results Found</h3>
+                        <p>We couldn't find any jewelry matching your search. Try different keywords or browse our collections.</p>
+                        <a href="products.html" class="cta-button">Browse All Products</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Searches -->
+        <section class="popular-searches">
+            <div class="section-header">
+                <h2 class="section-title">POPULAR SEARCHES</h2>
+                <p class="section-subtitle">Trending jewelry searches</p>
+            </div>
+            
+            <div class="popular-tags">
+                <span class="search-tag" onclick="searchByTag('diamond ring')">Diamond Ring</span>
+                <span class="search-tag" onclick="searchByTag('engagement')">Engagement</span>
+                <span class="search-tag" onclick="searchByTag('necklace')">Necklace</span>
+                <span class="search-tag" onclick="searchByTag('gold earrings')">Gold Earrings</span>
+                <span class="search-tag" onclick="searchByTag('tennis bracelet')">Tennis Bracelet</span>
+                <span class="search-tag" onclick="searchByTag('pearl')">Pearl</span>
+                <span class="search-tag" onclick="searchByTag('sapphire')">Sapphire</span>
+                <span class="search-tag" onclick="searchByTag('watch')">Luxury Watch</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CUSTOMER CARE</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Care Instructions</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href="#">Custom Design</a></li>
+                    <li><a href="#">Repair Service</a></li>
+                    <li><a href="#">Appraisals</a></li>
+                    <li><a href="#">Personal Shopping</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="about.html">About Titanis</a></li>
+                    <li><a href="#">Heritage</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONNECT</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <p>Subscribe to our newsletter</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TITANIS JEWELRY. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/database.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>
